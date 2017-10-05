@@ -37,6 +37,11 @@ SELECT*FROM customer WHERE sallary <= 4000 ;
 --Data customer yang beralamat di Bandung
 SELECT*FROM customer WHERE address='Bandung';
 
+--Melihat data orders menggunakan klausa BETWEEN berdasarkan date
+SELECT * FROM `orders` WHERE date BETWEEN '2017-10-01' AND '2017-10-03';
+
+--Melihat data customer yang namanya berawalan S
+SELECT * FROM `customer` WHERE Name LIKE 'S%';
 --Merubah address Fajar dari Bandung menjadi Cimahi
 UPDATE customer SET address = 'Cimahi' WHERE Name = 'Fajar';
 
