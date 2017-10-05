@@ -37,6 +37,12 @@ SELECT*FROM customer WHERE sallary <= 4000 ;
 --Data customer yang beralamat di Bandung
 SELECT*FROM customer WHERE address='Bandung';
 
+--Merubah address Fajar dari Bandung menjadi Cimahi
+UPDATE customer SET address = 'Cimahi' WHERE Name = 'Fajar';
+
+--Menghapus data
+DELETE FROM orders WHERE ID = 1;
+
 --INNER JOIN tabel customer dengan orders menggunakan klaus WHERE
 SELECT c.ID, c.Name, o.Orders, o.Date FROM customer c INNER JOIN orders o ON c.ID = o.CUST_ID WHERE c.id = 1 ;
 
